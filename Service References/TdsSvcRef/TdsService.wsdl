@@ -64,6 +64,12 @@
   <wsdl:message name="ITdsService_GetCommentsInArgPoint_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetCommentsInArgPointResponse" />
   </wsdl:message>
+  <wsdl:message name="ITdsService_GetCommentReadInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommentReadInfo" />
+  </wsdl:message>
+  <wsdl:message name="ITdsService_GetCommentReadInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommentReadInfoResponse" />
+  </wsdl:message>
   <wsdl:message name="ITdsService_GetSourcesInArgPoint_InputMessage">
     <wsdl:part name="parameters" element="tns:GetSourcesInArgPoint" />
   </wsdl:message>
@@ -174,6 +180,10 @@
     <wsdl:operation name="GetCommentsInArgPoint">
       <wsdl:input wsaw:Action="http://tempuri.org/ITdsService/GetCommentsInArgPoint" message="tns:ITdsService_GetCommentsInArgPoint_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ITdsService/GetCommentsInArgPointResponse" message="tns:ITdsService_GetCommentsInArgPoint_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommentReadInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITdsService/GetCommentReadInfo" message="tns:ITdsService_GetCommentReadInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITdsService/GetCommentReadInfoResponse" message="tns:ITdsService_GetCommentReadInfo_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetSourcesInArgPoint">
       <wsdl:input wsaw:Action="http://tempuri.org/ITdsService/GetSourcesInArgPoint" message="tns:ITdsService_GetSourcesInArgPoint_InputMessage" />
@@ -296,6 +306,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetCommentsInArgPoint">
       <soap12:operation soapAction="http://tempuri.org/ITdsService/GetCommentsInArgPoint" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommentReadInfo">
+      <soap12:operation soapAction="http://tempuri.org/ITdsService/GetCommentReadInfo" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
