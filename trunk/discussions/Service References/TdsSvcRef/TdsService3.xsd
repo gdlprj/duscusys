@@ -6,6 +6,7 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="pointId" type="xs:int" />
+        <xs:element minOccurs="0" name="callerId" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -20,6 +21,7 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="topicId" type="xs:int" />
+        <xs:element minOccurs="0" name="callerId" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -112,6 +114,21 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="GetCommentReadInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="commentId" type="xs:int" />
+        <xs:element minOccurs="0" name="callerId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCommentReadInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/TdsSvc.Model" minOccurs="0" name="GetCommentReadInfoResult" nillable="true" type="q8:SCommentReadInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="GetSourcesInArgPoint">
     <xs:complexType>
       <xs:sequence>
@@ -122,7 +139,7 @@
   <xs:element name="GetSourcesInArgPointResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/TdsSvc.Model" minOccurs="0" name="GetSourcesInArgPointResult" nillable="true" type="q8:ArrayOfSSource" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/TdsSvc.Model" minOccurs="0" name="GetSourcesInArgPointResult" nillable="true" type="q9:ArrayOfSSource" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -178,7 +195,7 @@
   <xs:element name="GetSourcesOrderResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/TdsSvc.Model" minOccurs="0" name="GetSourcesOrderResult" nillable="true" type="q9:ArrayOfSOrderInfo" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/TdsSvc.Model" minOccurs="0" name="GetSourcesOrderResult" nillable="true" type="q10:ArrayOfSOrderInfo" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -186,7 +203,7 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="pointId" type="xs:int" />
-        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/TdsSvc.Model" minOccurs="0" name="attachment" nillable="true" type="q10:SInAttachment" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/TdsSvc.Model" minOccurs="0" name="attachment" nillable="true" type="q11:SInAttachment" />
         <xs:element minOccurs="0" name="callerId" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
@@ -200,7 +217,7 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="discussionId" type="xs:int" />
-        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/TdsSvc.Model" minOccurs="0" name="attachment" nillable="true" type="q11:SInAttachment" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/TdsSvc.Model" minOccurs="0" name="attachment" nillable="true" type="q12:SInAttachment" />
         <xs:element minOccurs="0" name="callerId" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
@@ -213,7 +230,7 @@
   <xs:element name="AddAttachmentToOwnAvatar">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/TdsSvc.Model" minOccurs="0" name="attachment" nillable="true" type="q12:SInAttachment" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/TdsSvc.Model" minOccurs="0" name="attachment" nillable="true" type="q13:SInAttachment" />
         <xs:element minOccurs="0" name="callerId" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
@@ -273,7 +290,7 @@
   <xs:element name="GetAttachmentsOrderResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/TdsSvc.Model" minOccurs="0" name="GetAttachmentsOrderResult" nillable="true" type="q13:ArrayOfSOrderInfo" />
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/TdsSvc.Model" minOccurs="0" name="GetAttachmentsOrderResult" nillable="true" type="q14:ArrayOfSOrderInfo" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -288,7 +305,7 @@
   <xs:element name="GetAttachmentsInArgPointResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/TdsSvc.Model" minOccurs="0" name="GetAttachmentsInArgPointResult" nillable="true" type="q14:ArrayOfSOutAttachment" />
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/TdsSvc.Model" minOccurs="0" name="GetAttachmentsInArgPointResult" nillable="true" type="q15:ArrayOfSOutAttachment" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

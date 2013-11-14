@@ -4,6 +4,7 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="NumUnreadComments" type="xs:int" />
       <xs:element minOccurs="0" name="OrderNumber" type="xs:int" />
       <xs:element minOccurs="0" name="PersonId" type="xs:int" />
       <xs:element minOccurs="0" name="Point" nillable="true" type="xs:string" />
@@ -49,6 +50,34 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfSComment" nillable="true" type="tns:ArrayOfSComment" />
+  <xs:complexType name="SCommentReadInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Comment" nillable="true" type="tns:SComment" />
+      <xs:element minOccurs="0" name="EveryoneInTopicRead" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PersonsWhoRead" nillable="true" type="tns:ArrayOfSPerson" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SCommentReadInfo" nillable="true" type="tns:SCommentReadInfo" />
+  <xs:complexType name="ArrayOfSPerson">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SPerson" nillable="true" type="tns:SPerson" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSPerson" nillable="true" type="tns:ArrayOfSPerson" />
+  <xs:complexType name="SPerson">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AvatarAttachmentId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Color" type="xs:int" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Online" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OnlineDevType" type="xs:int" />
+      <xs:element minOccurs="0" name="SeatId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="SessionId" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SPerson" nillable="true" type="tns:SPerson" />
   <xs:complexType name="ArrayOfSSource">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="SSource" nillable="true" type="tns:SSource" />
@@ -83,7 +112,6 @@
       <xs:element minOccurs="0" name="Link" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="MediaData" nillable="true" type="xs:base64Binary" />
       <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="OrderNumber" type="xs:int" />
       <xs:element minOccurs="0" name="Thumb" nillable="true" type="xs:base64Binary" />
       <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="VideoEmbedURL" nillable="true" type="xs:string" />
