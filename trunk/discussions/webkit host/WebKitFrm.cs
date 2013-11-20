@@ -28,7 +28,7 @@ namespace Discussions.webkit_host
 
             _url = url;
 
-            _browserBar = new BrowserBar {Browser = webKitBrowser1, WinForm = this};
+            //_browserBar = new BrowserBar {Browser = webKitBrowser1, WinForm = this};
             elementHost1.Child = _browserBar;
 
             //Width = (int) (0.8*Screen.PrimaryScreen.Bounds.Width);
