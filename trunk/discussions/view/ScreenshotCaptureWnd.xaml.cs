@@ -197,11 +197,11 @@ namespace Discussions.view
             if (_state == CaptureState.SelectingWindow)
             {
                 _state = CaptureState.SelectedWindow;
-                this.Background = new SolidColorBrush(System.Windows.Media.Color.FromArgb(0xFF, 0x5D, 0x5D, 0x5D));
+               // this.Background = new SolidColorBrush(System.Windows.Media.Color.FromArgb(0xFF, 0x5D, 0x5D, 0x5D));
                 MaxHeight = System.Windows.SystemParameters.PrimaryScreenHeight;
                 this.WindowState = WindowState.Maximized;
-
-                this.Opacity = 0.6;
+                lblHelp.VerticalAlignment = VerticalAlignment.Top;
+               // this.Opacity = 0.6;
 
                 lblHelp.Visibility = Visibility.Visible;
                 btnStartDrawing.Visibility = Visibility.Hidden;
@@ -217,6 +217,12 @@ namespace Discussions.view
         {
             ShowOwnWindows();
             Close();
+        }
+
+        private void ScreenshotCaptureWnd_OnKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Escape)
+                btnCancel_Click_1(sender, e);
         }
     }
 }
